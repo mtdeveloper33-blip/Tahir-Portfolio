@@ -166,8 +166,8 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold mb-1">Email</h4>
-                    <a href="mailto:miantahir1827@gmail.com" className="text-text-secondary hover:text-primary transition-colors duration-300">
-                      miantahir1827@gmail.com
+                    <a href="mailto:tahirmehmood1827@gmail.com" className="text-text-secondary hover:text-primary transition-colors duration-300">
+                      tahirmehmood1827@gmail.com
                     </a>
                   </div>
                 </div>

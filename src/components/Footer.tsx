@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     { icon: <Github size={20} />, href: 'https://github.com/Mian-Tahir', label: 'GitHub' },
     { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/in/m-tahir-mahmood/', label: 'LinkedIn' },
     { icon: <Twitter size={20} />, href: 'https://x.com/ta15159_tahir?t=IXP5Q-qg6622SnBJCPgGZw&s=09', label: 'Twitter' },
-    { icon: <Mail size={20} />, href: 'https://mail.google.com/mail/?view=cm&to=miantahir1827@gmail.com', label: 'Email' },
+    { icon: <Mail size={20} />, href: 'https://mail.google.com/mail/?view=cm&to=tahirmehmood1827@gmail.com', label: 'Email' },
   ];
 
   const quickLinks = [
@@ -140,7 +140,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-text-secondary">
               <li className="flex items-center gap-2">
                 <Mail size={24} className="text-primary" />
-                <span>miantahir1827@gmail.com</span>
+                <span>tahirmehmood1827@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={24} className="text-primary" />
