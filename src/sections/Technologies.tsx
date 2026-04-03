@@ -18,8 +18,10 @@ interface TechnologyCategory {
   technologies: Technology[];
 }
 
+const isTechnology = (t: Technology | undefined): t is Technology => Boolean(t);
+
 const Technologies: React.FC = () => {
-  const [ref, inView] = useInView({
+  useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -27,7 +29,6 @@ const Technologies: React.FC = () => {
   const technologiesRef = useRef<HTMLDivElement>(null);
   const tabsRef = useRef<HTMLDivElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
-  const cardsRef = useRef<HTMLDivElement[]>([]);
 
   const categories: TechnologyCategory[] = [
     {
@@ -50,6 +51,8 @@ const Technologies: React.FC = () => {
         { name: 'Express.js', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', proficiency: 90 },
         { name: 'REST API', icon: 'https://www.svgrepo.com/show/88703/api.svg', proficiency: 85 },
         { name: 'GraphQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg', proficiency: 80 },
+        { name: 'AWS S3 (S3 Bucket)', icon: 'https://www.svgrepo.com/show/448266/aws.svg', proficiency: 80 },
+        { name: 'Stripe', icon: 'https://www.svgrepo.com/show/331592/stripe-v2.svg', proficiency: 80 },
       ],
     },
     {
@@ -58,6 +61,7 @@ const Technologies: React.FC = () => {
         { name: 'MongoDB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg', proficiency: 90 },
         { name: 'PostgreSQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg', proficiency: 85 },
         { name: 'MySQL', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg', proficiency: 80 },
+        { name: 'Supabase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg', proficiency: 85 },
       ],
     },
   ];
@@ -67,8 +71,8 @@ const Technologies: React.FC = () => {
   // Gather all technologies for the 'All' tab, ensuring HTML, CSS, JavaScript come first, then all others in their original order (no duplicates)
   const techOrder = ['HTML5', 'CSS3', 'JavaScript'];
   const allTechsFlat = categories.flatMap(cat => cat.technologies);
-  const allTechnologies = [
-    ...techOrder.map(name => allTechsFlat.find(t => t.name === name)).filter(Boolean),
+  const allTechnologies: Technology[] = [
+    ...techOrder.map(name => allTechsFlat.find(t => t.name === name)).filter(isTechnology),
     ...allTechsFlat.filter(t => !techOrder.includes(t.name)),
   ];
 
@@ -76,8 +80,8 @@ const Technologies: React.FC = () => {
   const tabNames = ['All', ...categories.map(c => c.name)];
 
   // Current technologies based on active category
-  const currentTechnologies = activeCategory === 'All' 
-    ? allTechnologies.filter(Boolean) 
+  const currentTechnologies: Technology[] = activeCategory === 'All' 
+    ? allTechnologies
     : categories.find(c => c.name === activeCategory)?.technologies || [];
 
   useEffect(() => {
@@ -93,7 +97,7 @@ const Technologies: React.FC = () => {
       });
 
       // Animate tabs with a wave effect
-      tl.fromTo(tabsRef.current?.children, 
+      tl.fromTo(Array.from(tabsRef.current?.children ?? []), 
         { 
           opacity: 0, 
           y: -30, 
@@ -111,7 +115,7 @@ const Technologies: React.FC = () => {
       );
 
       // Animate initial cards with 3D flip effect
-      tl.fromTo(gridRef.current?.children, 
+      tl.fromTo(Array.from(gridRef.current?.children ?? []), 
         { 
           opacity: 0, 
           rotationY: -90, 
@@ -146,7 +150,7 @@ const Technologies: React.FC = () => {
     const ctx = gsap.context(() => {
       // Exit animation for current cards
       const exitTl = gsap.timeline();
-      exitTl.to(gridRef.current?.children, {
+      exitTl.to(Array.from(gridRef.current?.children ?? []), {
         opacity: 0,
         scale: 0.7,
         rotationY: 90,
@@ -158,14 +162,16 @@ const Technologies: React.FC = () => {
         },
         ease: "power2.in",
         onComplete: () => {
+          const gridChildren = Array.from(gridRef.current?.children ?? []);
+
           // Enter animation for new cards
-          gsap.set(gridRef.current?.children, {
+          gsap.set(gridChildren, {
             opacity: 0,
             scale: 0.7,
             rotationY: -90
           });
 
-          gsap.to(gridRef.current?.children, {
+          gsap.to(gridChildren, {
             opacity: 1,
             scale: 1,
             rotationY: 0,

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import AnimatedSection from '../components/AnimatedSection';
 import SectionTitle from '../components/SectionTitle';
-import { ExternalLink, Github, X } from 'lucide-react';
+import { ExternalLink, X } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -102,11 +102,34 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    title: 'NOLMT.AI',
-    description: 'NOLMT.AI is an advanced AI-driven call automation platform built with a full-stack architecture. It allows businesses to create workspaces, manage batches, upload contact lists, and run automated outbound AI calls. The system features secure authentication, real-time call processing, and intelligent voice interactions powered by ElevenLabs and custom agents. The platform includes a modern dashboard with React, Node.js, Supabase, and AWS S3, offering a seamless, scalable, and high-performance user experience.',
+    title: 'NOLMT.ai',
+    description: 'NOLMT.ai is a full-stack generative AI SaaS for Text-to-Image, Image-to-Image, Text-to-Video, and Image-to-Video creation, powered by a granular credit system. It includes secure auth (email + Google), Stripe subscriptions/top-ups, S3 storage with signed downloads, a user dashboard, and an admin portal for analytics and plan/pricing management.',
     image: 'nolmtai.png',
     category: ['frontend', 'backend', 'AI', 'full-stack'],
-    technologies: ['React', 'EmailJS', 'Tailwind CSS', 'TypeScript', 'Node.js', 'Express.js', 'Supabase', 'JWT', 's3 bucket', 'stripe'],
+    technologies: [
+      'Wavespeed AI',
+      'React',
+      'TypeScript',
+      'Vite',
+      'TailwindCSS',
+      'React Router',
+      'React Hot Toast',
+      'Recharts',
+      'Lucide React',
+      'Node.js',
+      'Express',
+      'Supabase',
+      'MongoDB',
+      'Mongoose',
+      'Stripe',
+      'AWS S3 (AWS SDK v3)',
+      'JWT',
+      'Passport (local & Google OAuth20)',
+      'Nodemailer',
+      'Twilio',
+      'Express Rate Limit',
+      'Node-Cron'
+    ],
     liveUrl: 'https://nolmt.ai/',
     githubUrl: 'https://github.com',
   },
@@ -145,7 +168,7 @@ const projects: Project[] = [
     githubUrl: 'https://github.com', // replace with your repo
   },
   {
-    id: 9,
+    id: 10,
     title: 'AllThreads.ai',
     description:
       'AllThreads.ai is a multi-agent outreach platform that turns a single prompt into fully compliant, on-brand campaigns across email, LinkedIn, and phone. It helps sales teams orchestrate personalized multi-channel sequences in minutes instead of weeks, while giving revenue and ops leaders enterprise-grade governance, cost control, and full auditability. The product is designed for teams that want to scale AI-driven outreach without losing control over messaging, approvals, and compliance.',
@@ -170,7 +193,7 @@ const projects: Project[] = [
 type CategoryFilter = 'all' | 'full-stack' | 'frontend' | 'backend';
 
 const Portfolio: React.FC = () => {
-  const [ref, inView] = useInView({
+  useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -255,7 +278,7 @@ const Portfolio: React.FC = () => {
       );
 
       // Add hover animations for cards
-      cardRefs.current.forEach((card, index) => {
+      cardRefs.current.forEach((card) => {
         if (!card) return;
 
         const handleMouseEnter = (): void => {
