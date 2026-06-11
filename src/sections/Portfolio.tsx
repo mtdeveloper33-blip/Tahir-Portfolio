@@ -124,7 +124,7 @@ const projects: Project[] = [
     id: 9,
     title: 'Accelerate',
     description:
-    'Accelerate is an AI-powered coaching platform that gives users direct access to personalized coaching conversations with an AI version of coach Michael McIntyre. Users can explore resilience, goal-setting, and mindset through real-time text chat or live voice calls, getting immediate, thoughtful responses tailored to their questions. The platform makes professional coaching insights accessible anytime, helping users reflect on challenges, clarify objectives, and develop strategies for personal growth—all through an intuitive, conversation-driven interface that feels natural and supportive.',
+    ''Accelerate is an AI-powered coaching platform that gives users direct access to personalized coaching conversations with an AI version of coach Michael McIntyre. Users can explore resilience, goal-setting, and mindset through real-time text chat or live voice calls, getting immediate, thoughtful responses tailored to their questions. The platform makes professional coaching insights accessible anytime, helping users reflect on challenges, clarify objectives, and develop strategies for personal growth—all through an intuitive, conversation-driven interface that feels natural and supportive.',
   image: 'accelerate.png',
     category: ['frontend', 'backend','full-stack','AI'],
     technologies: [
