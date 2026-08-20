@@ -252,8 +252,12 @@ const Hero: React.FC = () => {
                 />
               </h2>
               <p ref={descriptionRef} className="text-text-secondary max-w-xl mt-4">
-                I am passionate about building exceptional digital experiences that drive results.
-                With expertise in the MERN stack, I deliver robust, scalable, and high-performance web applications.I thrive on solving complex problems and transforming ideas into reality.Let's work together to create impactful solutions for your business.
+               I like building things from the ground up—taking an idea, figuring out how it should work, and turning it into a product that feels simple to use.
+
+Over the past 2.5+ years, I’ve worked across the full stack, building web applications and AI-powered products with React.js, Next.js, TypeScript, Node.js, and modern databases.
+
+For me, good software isn’t just about making features work. It’s about solving the right problem, keeping the code maintainable, and creating an experience that makes the complexity feel invisible.
+
               </p>
             </div>
 
@@ -268,7 +272,7 @@ const Hero: React.FC = () => {
               >
                 Hire Me <ArrowRight className="ml-2 " size={18} />
               </ScrollLink>
-              <a href="/Tahir Mehmood Cv.pdf" className="btn-primary" download>
+              <a href="/Tahir_Mehmood_CV.pdf" className="btn-primary" download>
                 Download CV <Download className="ml-2" size={18} />
               </a>
             </div>
@@ -298,11 +302,11 @@ const Hero: React.FC = () => {
           <div className="hidden lg:flex justify-center items-center">
             <div className="relative" ref={profileImageRef}>
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl opacity-30"></div>
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-primary/30 relative z-10">
-                <img 
-                  src="/PORTFOLIO IMGAE.jpg" 
-                  alt="John Doe" 
-                  className="w-full h-full object-cover"
+              <div className="w-80 h-80 sm:w-96 sm:h-96 rounded-full overflow-hidden border-4 border-primary/30 relative z-10">
+                <img
+                  src="/profile.jpeg"
+                  alt="Tahir Mehmood"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>

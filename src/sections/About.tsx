@@ -125,40 +125,46 @@ const About: React.FC = () => {
     },
   ];
 
-  const experience = [
-    {
-      position: 'Mernstack Developer',
-      company: 'Minibyte.Ai',
-      duration: '09/2024 - Present, Rawalpindi',
-      responsibilities: [
-        'Built and maintained production-grade SaaS platforms using React.js, Node.js, Express.js and MongoDB',
-        'Integrated third-party and Python APIs including Vapi.ai,Bolna.ai, and OCR engines for AI-driven automation.',
-        'Collaborated in agile teams to deliver production-ready features for voice agents, dashboards, annotation tool, Graph OCR system, and hotel management platforms.',
-        'Implemented Git-based version control workﬂows to improving deployment eﬃciency.',
-      ],
-    },
-    {
-      position: 'Junior MernStack Developer',
-      company: 'CortechSols pvt Ltd',
-      duration: '03/2024 - 07/2024, Rawalpindi',
-      responsibilities: [
-        'Developed scalable web applications using the MERN stack.',
-        'Collaborated on cross-functional teams for design and deployment.',
-        'Developed MERN stack apps using Redux and Redux Toolkit and RESTful APIs for scalable, maintainable solutions.',
-        'Used Git/GitHub for version control and explored Next.js fundamentals to enhance frontend skills.',
-      ],
-    },
-    {
-      position: 'Full Stack Developer',
-      company: 'Slash Byte',
-      duration: '12/2023 - 03/2024, Faisalabad',
-      responsibilities: [
-        'Acquired practical experience in building full-stack applications using React.js, Node.js, Express.js, and Material UI.',
-        'Contributed to agile teams in delivering responsive frontend and scalable backend web solutions.',
-        'Utilized Git and GitHub for version control, collaborative development, and workﬂow management.',
-      ],
-    },
-  ];
+const experience = [
+  {
+    position: 'Full Stack Developer (MERN)',
+    company: 'miniByte.ai',
+    duration: '09/2024 - Present · Rawalpindi, Pakistan',
+    responsibilities: [
+      'Shipped and maintained 5+ production SaaS platforms end-to-end, working across React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, PostgreSQL, and Supabase.',
+      'Engineered high-performance, responsive interfaces and 40+ reusable RESTful API endpoints with a focus on scalable, modular architecture.',
+      'Integrated AI-powered capabilities including Vapi.ai and Bolna.ai voice agents, OCR, and LLM-powered features into customer-facing applications serving thousands of users.',
+      'Implemented secure authentication and authorization using JWT, OAuth, and role-based access control (RBAC), alongside Stripe payment and subscription workflows.',
+      'Built reusable UI components and modular backend services, reducing feature delivery time by approximately 30% across multiple products.',
+      'Integrated AWS S3 for secure file storage, media management, and document handling.',
+      'Collaborated within a 4+ person Agile team using Git and GitHub across code reviews, feature development, testing, and production releases.',
+    ],
+  },
+  {
+    position: 'Junior MERN Stack Developer',
+    company: 'CortechSols (Pvt.) Ltd',
+    duration: '03/2024 - 07/2024 · Rawalpindi, Pakistan',
+    responsibilities: [
+      'Delivered responsive full-stack web applications using React.js, Node.js, Express.js, and MongoDB, contributing across frontend and backend development.',
+      'Built reusable React components and integrated RESTful APIs across application workflows.',
+      'Implemented authentication, authorization, and MongoDB data operations while maintaining application reliability.',
+      'Diagnosed and resolved defects, delivered feature enhancements, and improved application performance.',
+      'Collaborated with senior developers throughout the SDLC using Git and GitHub within an Agile development workflow.',
+    ],
+  },
+  {
+    position: 'Junior Full Stack Developer',
+    company: 'Slash Byte',
+    duration: '12/2023 - 03/2024 · Faisalabad, Pakistan',
+    responsibilities: [
+      'Contributed to production full-stack applications using React.js, Node.js, Express.js, MongoDB, and Material UI, working across both frontend and backend features.',
+      'Built responsive interfaces and RESTful APIs for production-ready features.',
+      'Created reusable React components to improve development efficiency and consistency.',
+      'Optimized REST API endpoints and database queries to improve application response times.',
+      'Contributed to testing, debugging, and deployment of production releases within an Agile environment.',
+    ],
+  },
+];
 
   return (
     <AnimatedSection id="about" className="bg-background-light">

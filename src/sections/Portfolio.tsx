@@ -16,20 +16,9 @@ interface Project {
   category: string[];
   technologies: string[];
   liveUrl: string;
-  githubUrl: string;
 }
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Portfolio Website',
-    description: 'A responsive and dynamic portfolio website built with React and TypeScript, featuring smooth animations, interactive project showcases, and optimized UI/UX design using Tailwind CSS and Framer Motion.',
-    image: '/portfolio website.PNG',
-    category: ['frontend'],
-    technologies: ['React', "TypeScript", 'Tailwind CSS', 'Framer Motion', 'React-Scroll'],
-    liveUrl: 'https://tahir-portfolio-red.vercel.app/',
-    githubUrl: 'https://github.com',
-  },
   {
     id: 2,
     title: 'Annotation Tool (ANNA)',
@@ -50,13 +39,12 @@ const projects: Project[] = [
       'Mask R-CNN'
     ],
     liveUrl: 'https://amatdt.aethero.com/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 3,
     title: 'Chatley.AI',
     description: 'A 24/7 AI-powered voice assistant that handles business calls at scale, reducing operational costs by up to 40% with consistent, high-quality conversations.',
-    image: 'chatley ai project.PNG',
+    image: 'chatley.ai.png',
     category: ['full-stack', 'backend', 'frontend', 'AI'],
     technologies: [
       'React', 
@@ -68,7 +56,6 @@ const projects: Project[] = [
       'VAPI.ai'
     ],
     liveUrl: 'https://www.chatley.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 4,
@@ -78,7 +65,6 @@ const projects: Project[] = [
     category: ['frontend', 'backend'],
     technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'google-map-react', 'EmailJS'],
     liveUrl: 'https://jameelakhtarprojects.com/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 5,
@@ -88,7 +74,6 @@ const projects: Project[] = [
     category: ['frontend'],
     technologies: ['React', 'JavaScript', 'Tailwind CSS', 'React Icons', 'Styled Components'],
     liveUrl: 'https://travel-website-delta-lovat.vercel.app/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 6,
@@ -98,7 +83,6 @@ const projects: Project[] = [
     category: ['frontend'],
     technologies: ['React', 'EmailJS', 'Tailwind CSS', 'TypeScript'],
     liveUrl: 'https://dash-180.vercel.app/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 7,
@@ -131,17 +115,15 @@ const projects: Project[] = [
       'Node-Cron'
     ],
     liveUrl: 'https://nolmt.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 8,
     title: 'Minibyte.Ai',
     description: 'MiniByte.AI is a high-performance, fully responsive landing page designed to work seamlessly across all screen sizes. It showcases a deep-tech engineering company specializing in Autonomous Systems, Enterprise AI Platforms, and Synthetic Environment Generation. Built with React, TypeScript, Tailwind CSS, GSAP, Framer Motion, and React-Scroll, the site delivers smooth scroll animations, dynamic text transitions, and an immersive storytelling experience. It highlights MiniByte’s technical domains—from multi-modal perception systems and distributed edge intelligence to simulation-driven synthetic data generation—while reflecting the company’s first-principles engineering philosophy, end-to-end system ownership, and technical partnerships with enterprise R&D teams, startups, industrial companies, and government agencies.',
-    image: 'minibyteai.png',
+    image: 'minibyte.ai.png',
     category: ['frontend'],
     technologies: ['React', 'framer', 'Tailwind CSS', 'TypeScript', 'gsap', 'react-scroll'],
     liveUrl: 'https://www.minibyte.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 9,
@@ -162,7 +144,6 @@ const projects: Project[] = [
       'elevenlabs',
     ],
     liveUrl: 'https://accelerate-now.com/',
-    githubUrl: 'https://github.com', // replace with your repo
   },
   {
     id: 10,
@@ -180,7 +161,6 @@ const projects: Project[] = [
       'context api'
     ],
     liveUrl: 'https://allthreads.ai/',      // put your real URL here
-    githubUrl: 'https://github.com'        // replace with this repo’s URL
   }
   
   

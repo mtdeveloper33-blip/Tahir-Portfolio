@@ -4,7 +4,6 @@ import About from './sections/About';
 import Technologies from './sections/Technologies';
 import Services from './sections/Services';
 import Portfolio from './sections/Portfolio';
-import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 
@@ -18,7 +17,6 @@ function App() {
         <Technologies />
         <Services />
         <Portfolio />
-        <Testimonials />
         <Contact />
       </main>
       <Footer />

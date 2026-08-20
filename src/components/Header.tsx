@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'Skills', to: 'technologies', offset: -80 },
   { name: 'Services', to: 'services', offset: -80 },
   { name: 'Portfolio', to: 'portfolio', offset: -80 },
-  { name: 'Testimonials', to: 'testimonials', offset: -80 },
   { name: 'Contact', to: 'contact', offset: -80 },
 ];
 
